@@ -1,5 +1,1 @@
-<<<<<<< .merge_file_1ZLEvV
-include ':library'
-=======
-include ':app', ':recyclerrenderers'
->>>>>>> .merge_file_VmQrPV
+include ':recyclerrenderers'
