@@ -7,7 +7,7 @@ import butterknife.InjectView;
 import com.github.ppamorim.recyclerrenderers.R;
 import com.github.ppamorim.recyclerrenderers.core.fresco.InstrumentedDraweeView;
 import com.github.ppamorim.recyclerrenderers.domain.model.Console;
-import com.github.ppamorim.recyclerrenderers.library.viewholder.RenderViewHolder;
+import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
 import com.github.ppamorim.recyclerrenderers.util.ViewUtil;
 
 public class ViewHolderConsole extends RenderViewHolder<Console> {

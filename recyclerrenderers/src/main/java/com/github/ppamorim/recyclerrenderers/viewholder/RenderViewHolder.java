@@ -1,9 +1,9 @@
-package com.github.ppamorim.recyclerrenderers.library.viewholder;
+package com.github.ppamorim.recyclerrenderers.viewholder;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import com.github.ppamorim.recyclerrenderers.library.interfaces.Renderable;
+import com.github.ppamorim.recyclerrenderers.interfaces.Renderable;
 
 public abstract class RenderViewHolder<R extends Renderable> extends RecyclerView.ViewHolder {
 

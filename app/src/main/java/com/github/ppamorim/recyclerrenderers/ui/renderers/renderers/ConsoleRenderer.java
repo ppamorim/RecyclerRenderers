@@ -2,8 +2,8 @@ package com.github.ppamorim.recyclerrenderers.ui.renderers.renderers;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-import com.github.ppamorim.recyclerrenderers.library.renderer.Renderer;
-import com.github.ppamorim.recyclerrenderers.library.viewholder.RenderViewHolder;
+import com.github.ppamorim.recyclerrenderers.renderer.Renderer;
+import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
 import com.github.ppamorim.recyclerrenderers.ui.renderers.viewholder.ViewHolderConsole;
 
 public class ConsoleRenderer extends Renderer {

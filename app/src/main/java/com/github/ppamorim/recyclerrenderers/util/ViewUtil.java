@@ -13,8 +13,8 @@ import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
 import com.github.ppamorim.recyclerrenderers.core.fresco.InstrumentedDraweeView;
 import com.github.ppamorim.recyclerrenderers.domain.model.Console;
-import com.github.ppamorim.recyclerrenderers.library.adapter.RendererAdapter;
-import com.github.ppamorim.recyclerrenderers.library.builder.RendererBuilder;
+import com.github.ppamorim.recyclerrenderers.adapter.RendererAdapter;
+import com.github.ppamorim.recyclerrenderers.builder.RendererBuilder;
 import com.github.ppamorim.recyclerrenderers.ui.renderers.factory.Factory;
 import java.util.ArrayList;
 

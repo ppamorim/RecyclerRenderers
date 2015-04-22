@@ -1,12 +1,12 @@
-package com.github.ppamorim.recyclerrenderers.library.adapter;
+package com.github.ppamorim.recyclerrenderers.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
-import com.github.ppamorim.recyclerrenderers.library.builder.RendererBuilder;
-import com.github.ppamorim.recyclerrenderers.library.interfaces.Builder;
-import com.github.ppamorim.recyclerrenderers.library.interfaces.Renderable;
-import com.github.ppamorim.recyclerrenderers.library.renderer.Renderer;
-import com.github.ppamorim.recyclerrenderers.library.viewholder.RenderViewHolder;
+import com.github.ppamorim.recyclerrenderers.builder.RendererBuilder;
+import com.github.ppamorim.recyclerrenderers.interfaces.Builder;
+import com.github.ppamorim.recyclerrenderers.interfaces.Renderable;
+import com.github.ppamorim.recyclerrenderers.renderer.Renderer;
+import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
 import java.util.Collection;
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.github.ppamorim.recyclerrenderers.domain.model;
 
 import com.github.ppamorim.recyclerrenderers.R;
-import com.github.ppamorim.recyclerrenderers.library.interfaces.Renderable;
+import com.github.ppamorim.recyclerrenderers.interfaces.Renderable;
 
 public class Console implements Renderable {
 

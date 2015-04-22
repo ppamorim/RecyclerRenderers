@@ -1,7 +1,7 @@
-package com.github.ppamorim.recyclerrenderers.library.renderer;
+package com.github.ppamorim.recyclerrenderers.renderer;
 
 import android.view.ViewGroup;
-import com.github.ppamorim.recyclerrenderers.library.viewholder.RenderViewHolder;
+import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
 
 public abstract class Renderer {
 
