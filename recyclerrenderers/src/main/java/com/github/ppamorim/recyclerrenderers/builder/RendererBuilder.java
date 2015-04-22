@@ -1,8 +1,8 @@
-package com.github.ppamorim.recyclerrenderers.library.builder;
+package com.github.ppamorim.recyclerrenderers.builder;
 
-import com.github.ppamorim.recyclerrenderers.library.interfaces.Builder;
-import com.github.ppamorim.recyclerrenderers.library.interfaces.RendererFactory;
-import com.github.ppamorim.recyclerrenderers.library.renderer.Renderer;
+import com.github.ppamorim.recyclerrenderers.interfaces.Builder;
+import com.github.ppamorim.recyclerrenderers.interfaces.RendererFactory;
+import com.github.ppamorim.recyclerrenderers.renderer.Renderer;
 
 public class RendererBuilder implements Builder {
 
