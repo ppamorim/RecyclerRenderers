@@ -1,4 +1,10 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply plugin: 'checkstyle'
+
+dependencies {
+  compile 'com.android.support:appcompat-v7:22.1.0'
+  compile 'com.android.support:recyclerview-v7:22.1.0'
+}
 
 android {
 
@@ -6,15 +12,10 @@ android {
   buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
 
   defaultConfig {
-    applicationId "com.github.ppamorim.recyclerrenderers"
     versionCode Integer.parseInt(project.VERSION_CODE)
     versionName project.VERSION_NAME
     minSdkVersion Integer.parseInt(project.ANDROID_MIN_SDK)
     targetSdkVersion Integer.parseInt(project.ANDROID_TARGET_SDK_VERSION)
-  }
-
-  packagingOptions {
-    exclude 'META-INF/services/javax.annotation.processing.Processor'
   }
 
   sourceSets {
@@ -27,22 +28,7 @@ android {
   lintOptions {
     abortOnError false
   }
-  productFlavors {}
 
-}
-
-repositories {
-  maven {
-    url "https://jitpack.io"
-  }
-}
-
-dependencies {
-  compile project(':library')
-  compile 'com.android.support:appcompat-v7:22.1.0'
-  compile 'com.android.support:recyclerview-v7:22.1.0'
-  compile 'com.jakewharton:butterknife:6.1.0'
-  compile 'com.facebook.fresco:fresco:0.3.0+'
 }
 
 task checkstyle(type: Checkstyle) {
