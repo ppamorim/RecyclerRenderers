@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.ppamorim:recyclerrenderers:v1.12'
+  compile 'com.github.ppamorim:recyclerrenderers:v1.13'
 }
 ```
 
