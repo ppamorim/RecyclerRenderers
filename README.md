@@ -3,6 +3,7 @@
 The easiest way to create adapters! You can add a lot of different layouts and models. This library avoid all the boilerplates needed to create a list for your application.
 
 Highly inspired on [Renderers][10] and [RecyclerViewRenderers][11].
+I will soon create a cards support library to this.
 
 Support
 -------
