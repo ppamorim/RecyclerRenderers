@@ -1,4 +1,14 @@
-# RecyclerRenderers
+![Logo 1][1]
+
+Support
+-------
+
+This library works on API 10, but not yet tested.
+
+How to use
+----------
+
+You can use [this sample ][2] to understand this library. I will document soon.
 
 Import dependency
 --------------------------------
@@ -21,7 +31,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.ppamorim:recyclerrenderers:v1.12'
+  compile 'com.github.ppamorim:recyclerrenderers:v1.14'
 }
 ```
 
@@ -35,9 +45,6 @@ Developed By
 
 * Pedro Paulo de Amorim - <pp.amorim@hotmail.com>
 
-<a href="https://twitter.com/manodocarvao">
-  <img alt="Follow me on Twitter" src="http://imageshack.us/a/img812/3923/smallth.png" />
-</a>
 <a href="https://www.linkedin.com/profile/view?id=185411359">
   <img alt="Add me to Linkedin" src="http://imageshack.us/a/img41/7877/smallld.png" />
 </a>
@@ -65,6 +72,8 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
 
+[1]: ./art/logo.png
+[2]: https://github.com/ppamorim/RecyclerRenderers/tree/master/app/src/main/java/com/github/ppamorim/recyclerrenderers/ui/renderers
 [3]: https://github.com/ppamorim/
 [5]: https://github.com/JakeWharton/butterknife
 [13]: https://github.com/facebook/fresco
