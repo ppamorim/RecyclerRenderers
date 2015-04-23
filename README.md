@@ -1,5 +1,10 @@
 ![Logo 1][1]
 
+Support
+-------
+
+This library works on API 10, but not yet tested.
+
 Import dependency
 --------------------------------
 
