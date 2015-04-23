@@ -1,5 +1,9 @@
 ![Logo 1][1]
 
+The easiest way to create adapters! You can add a lot of different layouts and models. This library avoid all the boilerplates needed to create a list for your application.
+
+Highly inspired on [Renderers][10] and [RecyclerViewRenderers][11].
+
 Support
 -------
 
@@ -76,4 +80,6 @@ License
 [2]: https://github.com/ppamorim/RecyclerRenderers/tree/master/app/src/main/java/com/github/ppamorim/recyclerrenderers/ui/renderers
 [3]: https://github.com/ppamorim/
 [5]: https://github.com/JakeWharton/butterknife
+[10]: https://github.com/pedrovgs/Renderers
+[11]: https://github.com/Alexrs95/RecyclerViewRenderers
 [13]: https://github.com/facebook/fresco
