@@ -8,7 +8,7 @@ This library works on API 10, but not yet tested.
 How to use
 ----------
 
-You can use [this][2] sample to use this library.
+You can use [this sample ][2] to understand this library. I will document soon.
 
 Import dependency
 --------------------------------
