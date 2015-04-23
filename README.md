@@ -1,4 +1,4 @@
-# RecyclerRenderers
+![Logo 1][10]
 
 Import dependency
 --------------------------------
@@ -65,6 +65,7 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
 
+[1]: ./art/logo.png
 [3]: https://github.com/ppamorim/
 [5]: https://github.com/JakeWharton/butterknife
 [13]: https://github.com/facebook/fresco
