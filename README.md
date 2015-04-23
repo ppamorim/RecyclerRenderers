@@ -5,6 +5,11 @@ Support
 
 This library works on API 10, but not yet tested.
 
+How to use
+----------
+
+You can use [this][2] sample to use this library.
+
 Import dependency
 --------------------------------
 
@@ -71,6 +76,7 @@ License
     limitations under the License.
 
 [1]: ./art/logo.png
+[2]: https://github.com/ppamorim/RecyclerRenderers/tree/master/app/src/main/java/com/github/ppamorim/recyclerrenderers/ui/renderers
 [3]: https://github.com/ppamorim/
 [5]: https://github.com/JakeWharton/butterknife
 [13]: https://github.com/facebook/fresco
