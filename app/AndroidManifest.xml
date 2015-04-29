@@ -10,9 +10,9 @@
     android:icon="@mipmap/ic_launcher"
     android:label="@string/app_name"
     android:theme="@style/AppTheme.Base"
-    android:name=".RecyclerRendererApplication">
+    android:name="com.github.ppamorim.recyclerrenderers.RecyclerRendererApplication">
     <activity
-      android:name=".ui.activity.BaseActivity"
+      android:name="com.github.ppamorim.recyclerrenderers.ui.activity.BaseActivity"
       android:label="@string/app_name" >
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
