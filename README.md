@@ -4,8 +4,7 @@
 
 The easiest way to create adapters! You can add a lot of different layouts and models. This library avoid all the boilerplates needed to create a list for your application.
 
-Highly inspired on [Renderers][10] and [RecyclerViewRenderers][11].
-I will soon create a cards support library to this.
+Highly inspired on [Renderers][10] and [RecyclerViewRenderers][11], thanks for [Alexrs95][12].
 
 Support
 -------
@@ -38,7 +37,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.ppamorim:recyclerrenderers:v1.14'
+  compile 'com.github.ppamorim:recyclerrenderers:v1.15.1'
 }
 ```
 
@@ -85,4 +84,5 @@ License
 [5]: https://github.com/JakeWharton/butterknife
 [10]: https://github.com/pedrovgs/Renderers
 [11]: https://github.com/Alexrs95/RecyclerViewRenderers
+[12]: https://github.com/Alexrs95
 [13]: https://github.com/facebook/fresco
