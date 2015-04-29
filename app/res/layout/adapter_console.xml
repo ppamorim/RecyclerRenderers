@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="200dp">
 
-  <com.github.ppamorim.recyclerrenderers.core.fresco.InstrumentedDraweeView
+  <com.github.ppamorim.sample.core.fresco.InstrumentedDraweeView
       android:id="@+id/console_image"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
