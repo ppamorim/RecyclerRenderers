@@ -15,8 +15,8 @@
 */
 package com.github.ppamorim.sample.domain.model;
 
+import com.github.ppamorim.recyclerrenderers.interfaces.Renderable;
 import com.github.ppamorim.sample.R;
-import com.github.ppamorim.sample.interfaces.Renderable;
 
 public class Console implements Renderable {
 

@@ -19,10 +19,10 @@ import android.view.View;
 import android.widget.TextView;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
 import com.github.ppamorim.sample.R;
 import com.github.ppamorim.sample.core.fresco.InstrumentedDraweeView;
 import com.github.ppamorim.sample.domain.model.Console;
-import com.github.ppamorim.sample.viewholder.RenderViewHolder;
 import com.github.ppamorim.sample.util.ViewUtil;
 
 public class ViewHolderConsole extends RenderViewHolder<Console> {

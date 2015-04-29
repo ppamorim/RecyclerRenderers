@@ -15,9 +15,9 @@
 */
 package com.github.ppamorim.sample.ui.renderers.factory;
 
+import com.github.ppamorim.recyclerrenderers.interfaces.RendererFactory;
+import com.github.ppamorim.recyclerrenderers.renderer.Renderer;
 import com.github.ppamorim.sample.R;
-import com.github.ppamorim.sample.interfaces.RendererFactory;
-import com.github.ppamorim.sample.renderer.Renderer;
 import com.github.ppamorim.sample.ui.renderers.renderers.ConsoleRenderer;
 
 public class Factory implements RendererFactory {

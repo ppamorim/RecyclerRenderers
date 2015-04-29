@@ -26,10 +26,10 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
+import com.github.ppamorim.recyclerrenderers.adapter.RendererAdapter;
+import com.github.ppamorim.recyclerrenderers.builder.RendererBuilder;
 import com.github.ppamorim.sample.core.fresco.InstrumentedDraweeView;
 import com.github.ppamorim.sample.domain.model.Console;
-import com.github.ppamorim.sample.adapter.RendererAdapter;
-import com.github.ppamorim.sample.builder.RendererBuilder;
 import com.github.ppamorim.sample.ui.renderers.factory.Factory;
 import java.util.ArrayList;
 
