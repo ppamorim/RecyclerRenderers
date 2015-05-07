@@ -78,8 +78,11 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
     return items.size();
   }
 
+  /**
+   * Now you can add a lot of differents models on adapter
+   */
   @Override public int getItemViewType(int position) {
-    return items.get(position).getRenderableResourceId();
+    return items.get(position).getRenderableResourceId(position);
   }
 
   public void add(Renderable item, int position) {
