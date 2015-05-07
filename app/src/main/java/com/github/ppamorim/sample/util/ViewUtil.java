@@ -50,7 +50,7 @@ public class ViewUtil {
   public static ArrayList<Renderable> generateObjects() {
     ArrayList<Renderable> renderables = new ArrayList<>();
 
-    renderables.add(new Hardware("http://www.kitguru.net/wp-content/uploads/2014/05/intel_core_pentium_devil_s_canyon_lga1150_haswell1.jpg", "Intel", "4790K"));
+    renderables.add(new Hardware("http://www.legitreviews.com/wp-content/uploads/2014/03/intel-devils-canyon-cpu.jpg", "Intel", "4790K"));
     renderables.add(new Hardware("http://static8.kabum.com.br/produtos/fotos/50118/50118_index_g.jpg", "AMD", "FX5950"));
 
     renderables.add(new Console("Xbox One","http://s3.amazonaws.com/digitaltrends-uploads-prod/2013/11/microsoft-xbox-one-review-system-v2.jpg"));
