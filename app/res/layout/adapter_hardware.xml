@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <com.github.ppamorim.sample.core.fresco.InstrumentedDraweeView
+        android:id="@+id/hardware_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:placeholderImage="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/hardware_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ragoon_green"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:paddingTop="16sp"
+        android:paddingBottom="2dp"
+        android:textSize="20sp"
+        android:layout_above="@+id/hardware_manufacturer"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/hardware_manufacturer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ragoon_green"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:paddingBottom="16sp"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

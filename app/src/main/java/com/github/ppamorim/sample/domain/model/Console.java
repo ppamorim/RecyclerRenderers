@@ -44,8 +44,13 @@ public class Console implements Renderable {
     this.imageUrl = imageUrl;
   }
 
-  @Override public int getRenderableResourceId() {
-    return R.layout.adapter_console;
+  @Override public int getRenderableResourceId(int position) {
+    switch (position % 2) {
+      case 0:
+        return R.layout.adapter_console;
+      default:
+        return R.layout.adapter_console_alternative;
+    }
   }
 
 }

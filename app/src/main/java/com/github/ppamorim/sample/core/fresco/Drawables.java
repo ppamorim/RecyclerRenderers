@@ -16,7 +16,7 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import com.github.ppamorim.sample.R;
 
-public class Drawables {
+  public class Drawables {
 
   public static void init(final Resources resources) {
     if (sPlaceholderDrawable == null) {

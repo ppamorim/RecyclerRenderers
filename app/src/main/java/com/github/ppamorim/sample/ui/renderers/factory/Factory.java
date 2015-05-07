@@ -19,13 +19,17 @@ import com.github.ppamorim.recyclerrenderers.interfaces.RendererFactory;
 import com.github.ppamorim.recyclerrenderers.renderer.Renderer;
 import com.github.ppamorim.sample.R;
 import com.github.ppamorim.sample.ui.renderers.renderers.ConsoleRenderer;
+import com.github.ppamorim.sample.ui.renderers.renderers.HardwareRenderer;
 
 public class Factory implements RendererFactory {
 
   @Override public Renderer getRenderer(int id) {
     switch (id) {
       case R.layout.adapter_console:
+      case R.layout.adapter_console_alternative:
         return new ConsoleRenderer(id);
+      case R.layout.adapter_hardware:
+        return new HardwareRenderer(id);
       default:
         return null;
     }

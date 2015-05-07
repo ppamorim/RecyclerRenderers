@@ -39,7 +39,7 @@ repositories {
 
 dependencies {
   compile project(':recyclerrenderers')
-  compile 'com.android.support:appcompat-v7:22.1.0'
+  compile 'com.android.support:appcompat-v7:22.1.1'
   compile 'com.android.support:recyclerview-v7:22.1.0'
   compile 'com.jakewharton:butterknife:6.1.0'
   compile 'com.facebook.fresco:fresco:0.3.0+'
