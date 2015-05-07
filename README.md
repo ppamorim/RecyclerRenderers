@@ -4,6 +4,8 @@
 
 The easiest way to create adapters! You can add a lot of different layouts and models. This library avoid all the boilerplates needed to create a list for your application.
 
+![Screen][14]
+
 Highly inspired on [Renderers][10] and [RecyclerViewRenderers][11], thanks for [Alexrs95][12].
 
 Support
@@ -37,7 +39,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.ppamorim:recyclerrenderers:v1.15.1'
+  compile 'com.github.ppamorim:recyclerrenderers:v1.2'
 }
 ```
 
@@ -86,3 +88,4 @@ License
 [11]: https://github.com/Alexrs95/RecyclerViewRenderers
 [12]: https://github.com/Alexrs95
 [13]: https://github.com/facebook/fresco
+[14]: ./art/screen.png
