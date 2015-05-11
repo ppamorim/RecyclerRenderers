@@ -82,7 +82,7 @@ License
     limitations under the License.
 
 [1]: ./art/logo.png
-[2]: https://github.com/ppamorim/RecyclerRenderers/tree/master/app/src/main/java/com/github/ppamorim/recyclerrenderers/ui/renderers
+[2]: https://github.com/ppamorim/RecyclerRenderers/tree/master/app/src/main/java/com/github/ppamorim/sample/ui/renderers
 [3]: https://github.com/ppamorim/
 [5]: https://github.com/JakeWharton/butterknife
 [10]: https://github.com/pedrovgs/Renderers
