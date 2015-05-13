@@ -15,7 +15,7 @@ public class HardwareRenderer extends Renderer {
   }
 
   @Override public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int id) {
-    if(layoutInflater == null) {
+    if (layoutInflater == null) {
       layoutInflater = LayoutInflater.from(viewGroup.getContext());
     }
     return new ViewHolderHardware(layoutInflater.inflate(id, viewGroup, false));
