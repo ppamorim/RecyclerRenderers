@@ -69,8 +69,9 @@ public class ViewUtil {
         + "images/stories/imagens/2014/DEZEMBRO/MS-Xbox-Console-Bare-600x361.jpg"));
     renderables.add(new Console("PS2", "http://www.hotgamez.com.br/"
         + "imagens/hotgamez.com.br/produtos/CONSOLES/PS2/PS2_2.jpg"));
-    renderables.add(new Console("PS1", "http://tec-cia.com.br/"
-        + "wp-content/uploads/2014/10/s8cx4ywjeyjybqubbcy6.jpg"));
+    for(int i = 0; i < 10000; i++) {
+      renderables.add(new Console("PS1", "http://tec-cia.com.br/" + "wp-content/uploads/2014/10/s8cx4ywjeyjybqubbcy6.jpg"));
+    }
     return renderables;
   }
 
