@@ -1,5 +1,7 @@
 ![Logo 1][1]
 
+[![Build Status Master](https://travis-ci.org/ppamorim/RecyclerRenderers.svg?branch=master)](https://travis-ci.org/ppamorim/RecyclerRenderers)
+[![Build Status Develop](https://travis-ci.org/ppamorim/RecyclerRenderers.svg?branch=develop)](https://travis-ci.org/ppamorim/RecyclerRenderers)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RecyclerRenderers-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1727)
 [![JitPack](https://img.shields.io/github/release/ppamorim/recyclerrenderers.svg?label=JitPack%20Maven)](https://jitpack.io/#ppamorim/recyclerrenderers/v1.2)
 
