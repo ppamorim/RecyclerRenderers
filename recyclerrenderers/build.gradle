@@ -24,6 +24,7 @@ android {
       java.srcDirs = ['src/main/java']
     }
   }
+
   lintOptions {
     abortOnError false
   }
