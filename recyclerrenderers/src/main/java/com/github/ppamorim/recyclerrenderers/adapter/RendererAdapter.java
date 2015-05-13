@@ -31,7 +31,7 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
   private Builder builder;
 
   public RendererAdapter(Collection<? extends Renderable> items, RendererBuilder builder) {
-    this((List<? extends Renderable>)items, builder);
+    this((List<? extends Renderable>) items, builder);
   }
 
   public RendererAdapter(List<? extends Renderable> items, RendererBuilder builder) {
