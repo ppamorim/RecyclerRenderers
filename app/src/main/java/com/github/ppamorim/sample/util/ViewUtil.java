@@ -21,6 +21,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.widget.TextView;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.interfaces.DraweeController;
@@ -45,7 +46,7 @@ public class ViewUtil {
     recyclerView.addItemDecoration(new MarginDecoration(context));
     recyclerView.setLayoutManager(layoutManager);
     recyclerView.setAdapter(new RendererAdapter(generateObjects(),
-        new RendererBuilder(new Factory())));
+        new RendererBuilder(new Factory()), LayoutInflater.from(context)));
   }
 
   public static ArrayList<Renderable> generateObjects() {

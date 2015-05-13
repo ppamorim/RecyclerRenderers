@@ -23,15 +23,17 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
 import com.github.ppamorim.sample.R;
 import com.github.ppamorim.sample.domain.model.Console;
+import com.github.ppamorim.sample.ui.activity.BaseActivity;
 import com.github.ppamorim.sample.util.ViewUtil;
 
-public class ViewHolderConsole extends RenderViewHolder<Console> {
+public class ViewHolderConsole extends RenderViewHolder<Console> implements View.OnClickListener {
 
   @InjectView(R.id.console_image) SimpleDraweeView consoleImage;
   @InjectView(R.id.console_name) TextView consoleName;
 
   public ViewHolderConsole(View view) {
     super(view);
+    view.setOnClickListener(this);
     ButterKnife.inject(this, view);
   }
 
@@ -40,4 +42,9 @@ public class ViewHolderConsole extends RenderViewHolder<Console> {
     ViewUtil.bind(consoleImage, console.getImageUrl());
   }
 
+  @Override public void onClick(View view) {
+    ((BaseActivity)getContext()).showPositionAndData(
+        getAdapterPosition(),
+        getItem().getName());
+  }
 }

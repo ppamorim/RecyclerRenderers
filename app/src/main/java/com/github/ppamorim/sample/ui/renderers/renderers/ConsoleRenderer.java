@@ -23,17 +23,9 @@ import com.github.ppamorim.sample.ui.renderers.viewholder.ViewHolderConsole;
 
 public class ConsoleRenderer extends Renderer {
 
-  LayoutInflater layoutInflater;
-
-  public ConsoleRenderer(int id) {
-    super(id);
-  }
-
-  @Override public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int id) {
-    if (layoutInflater == null) {
-      layoutInflater = LayoutInflater.from(viewGroup.getContext());
-    }
-    return new ViewHolderConsole(layoutInflater.inflate(id, viewGroup, false));
+  @Override public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup,
+      LayoutInflater layoutInflater, int resourceId) {
+    return new ViewHolderConsole(layoutInflater.inflate(resourceId, viewGroup, false));
   }
 
 }

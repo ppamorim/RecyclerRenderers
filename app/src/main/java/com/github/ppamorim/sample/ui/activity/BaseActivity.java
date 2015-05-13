@@ -18,6 +18,7 @@ package com.github.ppamorim.sample.ui.activity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
+import android.widget.Toast;
 import butterknife.InjectView;
 import com.github.ppamorim.sample.R;
 import com.github.ppamorim.sample.util.ViewUtil;
@@ -35,6 +36,11 @@ public class BaseActivity extends AbstractActivity {
     super.onCreate(savedInstanceState);
     toolbarTitle.setText(getResources().getString(R.string.app_name));
     ViewUtil.configRecyclerView(this, recyclerView);
+  }
+
+  public void showPositionAndData(int position, String data) {
+    Toast.makeText(this, "position: " + position
+        + " data: " + data, Toast.LENGTH_LONG).show();
   }
 
 }

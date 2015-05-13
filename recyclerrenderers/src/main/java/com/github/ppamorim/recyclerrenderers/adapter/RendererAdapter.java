@@ -16,38 +16,43 @@
 package com.github.ppamorim.recyclerrenderers.adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import com.github.ppamorim.recyclerrenderers.builder.RendererBuilder;
 import com.github.ppamorim.recyclerrenderers.interfaces.Builder;
 import com.github.ppamorim.recyclerrenderers.interfaces.Renderable;
-import com.github.ppamorim.recyclerrenderers.renderer.Renderer;
 import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
-import java.util.Collection;
-import java.util.List;
+import java.util.ArrayList;
 
 public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
 
-  private List<Renderable> items;
+  private LayoutInflater layoutInflater;
+  private ArrayList<Renderable> items;
   private Builder builder;
 
-  public RendererAdapter(Collection<? extends Renderable> items, RendererBuilder builder) {
-    this((List<? extends Renderable>) items, builder);
-  }
+  public RendererAdapter(ArrayList<Renderable> items, RendererBuilder builder,
+      LayoutInflater layoutInflater) {
 
-  public RendererAdapter(List<? extends Renderable> items, RendererBuilder builder) {
-    this.items = (List<Renderable>) items;
     if (items == null) {
       throw new IllegalArgumentException("Data must not be null");
     }
-    this.builder = builder;
+    this.items = items;
+
     if (builder == null) {
       throw new IllegalArgumentException("Builder must not be null");
     }
+    this.builder = builder;
+
+    if (layoutInflater == null) {
+      throw new IllegalArgumentException("LayoutInflater must not be null");
+    }
+    this.layoutInflater = layoutInflater;
+
   }
 
   @Override public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-    Renderer renderer = builder.instantiate(viewType).create();
-    return renderer.onCreateViewHolder(viewGroup, viewType);
+    return (builder.instantiate(viewType).create())
+        .onCreateViewHolder(viewGroup, layoutInflater, viewType);
   }
 
   @Override public void onBindViewHolder(RenderViewHolder holder, int position) {
@@ -78,9 +83,6 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
     return items.size();
   }
 
-  /**
-   * Now you can add a lot of differents models on adapter
-   */
   @Override public int getItemViewType(int position) {
     return items.get(position).getRenderableResourceId(position);
   }

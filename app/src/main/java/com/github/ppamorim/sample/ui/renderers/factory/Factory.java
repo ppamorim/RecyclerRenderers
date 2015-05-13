@@ -27,9 +27,9 @@ public class Factory implements RendererFactory {
     switch (id) {
       case R.layout.adapter_console:
       case R.layout.adapter_console_alternative:
-        return new ConsoleRenderer(id);
+        return new ConsoleRenderer();
       case R.layout.adapter_hardware:
-        return new HardwareRenderer(id);
+        return new HardwareRenderer();
       default:
         return null;
     }

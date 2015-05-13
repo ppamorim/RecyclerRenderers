@@ -20,10 +20,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import com.github.ppamorim.recyclerrenderers.interfaces.Renderable;
 
-public abstract class RenderViewHolder<R extends Renderable> extends RecyclerView.ViewHolder {
+public abstract class RenderViewHolder<T extends Renderable> extends RecyclerView.ViewHolder {
 
   private final Context context;
-  private R item;
+  private T item;
 
   public RenderViewHolder(View itemView) {
     super(itemView);
@@ -34,11 +34,11 @@ public abstract class RenderViewHolder<R extends Renderable> extends RecyclerVie
     return context;
   }
 
-  public void setItem(R item) {
+  public void setItem(T item) {
     this.item = item;
   }
 
-  public R getItem() {
+  public T getItem() {
     return item;
   }
 
@@ -48,6 +48,6 @@ public abstract class RenderViewHolder<R extends Renderable> extends RecyclerVie
 
   public void onViewDetachedFromWindow() { }
 
-  public abstract void onBindView(R item);
+  public abstract void onBindView(T item);
 
 }

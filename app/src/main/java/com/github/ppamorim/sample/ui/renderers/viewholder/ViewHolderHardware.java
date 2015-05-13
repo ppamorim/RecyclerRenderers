@@ -8,9 +8,10 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
 import com.github.ppamorim.sample.R;
 import com.github.ppamorim.sample.domain.model.Hardware;
+import com.github.ppamorim.sample.ui.activity.BaseActivity;
 import com.github.ppamorim.sample.util.ViewUtil;
 
-public class ViewHolderHardware extends RenderViewHolder<Hardware> {
+public class ViewHolderHardware extends RenderViewHolder<Hardware> implements View.OnClickListener {
 
   @InjectView(R.id.hardware_image) SimpleDraweeView hardwareImage;
   @InjectView(R.id.hardware_manufacturer) TextView hardwareManufacturer;
@@ -18,6 +19,7 @@ public class ViewHolderHardware extends RenderViewHolder<Hardware> {
 
   public ViewHolderHardware(View view) {
     super(view);
+    view.setOnClickListener(this);
     ButterKnife.inject(this, view);
   }
 
@@ -25,6 +27,12 @@ public class ViewHolderHardware extends RenderViewHolder<Hardware> {
     ViewUtil.verifyStringAndSet(hardwareManufacturer, hardware.getManufacturer());
     ViewUtil.verifyStringAndSet(hardwareModel, hardware.getModel());
     ViewUtil.bind(hardwareImage, hardware.getPicture());
+  }
+
+  @Override public void onClick(View view) {
+    ((BaseActivity)getContext()).showPositionAndData(
+        getAdapterPosition(),
+        getItem().getManufacturer());
   }
 
 }

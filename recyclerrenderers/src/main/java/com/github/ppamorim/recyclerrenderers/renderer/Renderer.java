@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2014 Alejandro Rodriguez Salamanca.
+* Copyright (C) 2015 Pedro Paulo de Amorim.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -15,21 +15,13 @@
 */
 package com.github.ppamorim.recyclerrenderers.renderer;
 
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
 
 public abstract class Renderer {
 
-  public final int resourceId;
-
-  public Renderer(int resourceId) {
-    this.resourceId = resourceId;
-  }
-
-  public abstract RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int resourceId);
-
-  public int getResourceId() {
-    return resourceId;
-  }
+  public abstract RenderViewHolder onCreateViewHolder(ViewGroup viewGroup,
+      LayoutInflater layoutInflater, int resourceId);
 
 }
