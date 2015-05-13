@@ -1,6 +1,7 @@
 ![Logo 1][1]
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RecyclerRenderers-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1727)
+[![JitPack](https://img.shields.io/github/release/ppamorim/recyclerrenderers.svg?label=JitPack%20Maven)](https://jitpack.io/#ppamorim/recyclerrenderers/v1.2)
 
 The easiest way to create adapters! You can add a lot of different layouts and models. This library avoid all the boilerplates needed to create a list for your application.
 
@@ -81,7 +82,7 @@ License
     limitations under the License.
 
 [1]: ./art/logo.png
-[2]: https://github.com/ppamorim/RecyclerRenderers/tree/master/app/src/main/java/com/github/ppamorim/recyclerrenderers/ui/renderers
+[2]: https://github.com/ppamorim/RecyclerRenderers/tree/master/app/src/main/java/com/github/ppamorim/sample/ui/renderers
 [3]: https://github.com/ppamorim/
 [5]: https://github.com/JakeWharton/butterknife
 [10]: https://github.com/pedrovgs/Renderers
