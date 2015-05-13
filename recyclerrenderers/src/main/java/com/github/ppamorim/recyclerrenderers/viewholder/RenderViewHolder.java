@@ -42,11 +42,11 @@ public abstract class RenderViewHolder<R extends Renderable> extends RecyclerVie
     return item;
   }
 
-  public void onViewRecycled() {}
+  public void onViewRecycled() { }
 
-  public void onViewAttachedToWindow() {}
+  public void onViewAttachedToWindow() { }
 
-  public void onViewDetachedFromWindow() {}
+  public void onViewDetachedFromWindow() { }
 
   public abstract void onBindView(R item);
 
