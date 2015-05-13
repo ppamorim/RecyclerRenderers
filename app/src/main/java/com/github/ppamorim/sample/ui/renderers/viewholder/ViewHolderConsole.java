@@ -19,15 +19,15 @@ import android.view.View;
 import android.widget.TextView;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
 import com.github.ppamorim.sample.R;
-import com.github.ppamorim.sample.core.fresco.InstrumentedDraweeView;
 import com.github.ppamorim.sample.domain.model.Console;
 import com.github.ppamorim.sample.util.ViewUtil;
 
 public class ViewHolderConsole extends RenderViewHolder<Console> {
 
-  @InjectView(R.id.console_image) InstrumentedDraweeView consoleImage;
+  @InjectView(R.id.console_image) SimpleDraweeView consoleImage;
   @InjectView(R.id.console_name) TextView consoleName;
 
   public ViewHolderConsole(View view) {
