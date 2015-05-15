@@ -43,7 +43,7 @@ public class ViewHolderConsole extends RenderViewHolder<Console> implements View
   }
 
   @Override public void onClick(View view) {
-    ((BaseActivity)getContext()).showPositionAndData(
+    ((BaseActivity) getContext()).showPositionAndData(
         getAdapterPosition(),
         getItem().getName());
   }
