@@ -42,7 +42,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.ppamorim:recyclerrenderers:1.2.1'
+  compile 'com.github.ppamorim:recyclerrenderers:1.2.2'
 }
 ```
 
