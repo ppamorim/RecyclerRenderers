@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2014 Alejandro Rodriguez Salamanca.
+* Copyright (C) 2015 Pedro Paulo de Amorim.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,8 +16,5 @@
 package com.github.ppamorim.recyclerrenderers.interfaces;
 
 public interface Renderable {
-  /**
-   * Now you can add a lot of differents models on adapter
-   */
   int getRenderableResourceId(int position);
 }
