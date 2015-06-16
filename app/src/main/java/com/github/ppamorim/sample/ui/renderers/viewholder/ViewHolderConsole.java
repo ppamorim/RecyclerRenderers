@@ -44,11 +44,11 @@ public class ViewHolderConsole extends RenderViewHolder<Console> implements View
   }
 
   @Override public void onClick(View view) {
-    if(getContext() instanceof MultiActivity) {
+    if (getContext() instanceof MultiActivity) {
       ((MultiActivity) getContext()).showPositionAndData(
           getAdapterPosition(),
           getItem().getName());
-    } else if(getContext() instanceof ConsolesActivity) {
+    } else if (getContext() instanceof ConsolesActivity) {
       ((ConsolesActivity) getContext()).showPositionAndData(
           getAdapterPosition(),
           getItem().getName());

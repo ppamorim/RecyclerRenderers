@@ -46,11 +46,11 @@ public class ViewHolderHardware extends RenderViewHolder<Hardware> implements Vi
   }
 
   @Override public void onClick(View view) {
-    if(getContext() instanceof MultiActivity) {
+    if (getContext() instanceof MultiActivity) {
       ((MultiActivity) getContext()).showPositionAndData(
           getAdapterPosition(),
           getItem().getManufacturer());
-    } else if(getContext() instanceof ConsolesActivity) {
+    } else if (getContext() instanceof ConsolesActivity) {
       ((ConsolesActivity) getContext()).showPositionAndData(
           getAdapterPosition(),
           getItem().getManufacturer());
