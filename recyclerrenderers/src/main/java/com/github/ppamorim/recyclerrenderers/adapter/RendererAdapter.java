@@ -87,7 +87,7 @@ public class RendererAdapter<T> extends RecyclerView.Adapter<RenderViewHolder> {
   }
 
   @Override public int getItemViewType(int position) {
-    return ((Renderable) items.get(position)).getRenderableResourceId(position);
+    return ((Renderable)items.get(position)).getRenderableResourceId(position);
   }
 
   public void add(Renderable item, int position) {
