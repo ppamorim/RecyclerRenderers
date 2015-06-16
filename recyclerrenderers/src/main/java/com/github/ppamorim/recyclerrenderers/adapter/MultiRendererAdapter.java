@@ -24,13 +24,13 @@ import com.github.ppamorim.recyclerrenderers.interfaces.Renderable;
 import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
 import java.util.ArrayList;
 
-public class RendererAdapter<T> extends RecyclerView.Adapter<RenderViewHolder> {
+public class MultiRendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
 
   private LayoutInflater layoutInflater;
-  private ArrayList<T> items;
+  private ArrayList<Renderable> items;
   private Builder builder;
 
-  public RendererAdapter(ArrayList<T> items, RendererBuilder builder,
+  public MultiRendererAdapter(ArrayList<Renderable> items, RendererBuilder builder,
       LayoutInflater layoutInflater) {
 
     if (items == null) {
@@ -59,8 +59,8 @@ public class RendererAdapter<T> extends RecyclerView.Adapter<RenderViewHolder> {
   }
 
   @Override public void onBindViewHolder(RenderViewHolder holder, int position) {
-    holder.onBindView((Renderable) items.get(position));
-    holder.setItem((Renderable) items.get(position));
+    holder.onBindView(items.get(position));
+    holder.setItem(items.get(position));
   }
 
   @Override public long getItemId(int position) {
@@ -87,11 +87,11 @@ public class RendererAdapter<T> extends RecyclerView.Adapter<RenderViewHolder> {
   }
 
   @Override public int getItemViewType(int position) {
-    return ((Renderable)items.get(position)).getRenderableResourceId(position);
+    return items.get(position).getRenderableResourceId(position);
   }
 
   public void add(Renderable item, int position) {
-    items.add(position, (T) item);
+    items.add(position, item);
     notifyItemInserted(position);
   }
 
