@@ -23,7 +23,8 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
 import com.github.ppamorim.sample.R;
 import com.github.ppamorim.sample.domain.model.Console;
-import com.github.ppamorim.sample.ui.activity.BaseActivity;
+import com.github.ppamorim.sample.ui.activity.ConsolesActivity;
+import com.github.ppamorim.sample.ui.activity.MultiActivity;
 import com.github.ppamorim.sample.util.ViewUtil;
 
 public class ViewHolderConsole extends RenderViewHolder<Console> implements View.OnClickListener {
@@ -43,8 +44,14 @@ public class ViewHolderConsole extends RenderViewHolder<Console> implements View
   }
 
   @Override public void onClick(View view) {
-    ((BaseActivity) getContext()).showPositionAndData(
-        getAdapterPosition(),
-        getItem().getName());
+    if(getContext() instanceof MultiActivity) {
+      ((MultiActivity) getContext()).showPositionAndData(
+          getAdapterPosition(),
+          getItem().getName());
+    } else if(getContext() instanceof ConsolesActivity) {
+      ((ConsolesActivity) getContext()).showPositionAndData(
+          getAdapterPosition(),
+          getItem().getName());
+    }
   }
 }

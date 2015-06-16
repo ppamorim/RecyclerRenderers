@@ -1,6 +1,7 @@
 <resources>
   <string name="app_name">RecyclerRenderers</string>
-
+  <string name="multi_renderers">MultiRenderers</string>
+  <string name="renderer">Renderer</string>
   <string name="hello_world">Hello world!</string>
   <string name="action_settings">Settings</string>
 </resources>

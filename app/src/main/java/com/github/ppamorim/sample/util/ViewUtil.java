@@ -28,6 +28,7 @@ import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
+import com.github.ppamorim.recyclerrenderers.adapter.MultiRendererAdapter;
 import com.github.ppamorim.recyclerrenderers.adapter.RendererAdapter;
 import com.github.ppamorim.recyclerrenderers.builder.RendererBuilder;
 import com.github.ppamorim.recyclerrenderers.interfaces.Renderable;
@@ -38,6 +39,17 @@ import java.util.ArrayList;
 
 public class ViewUtil {
 
+  public static void configMultiRecyclerView(final Context context, RecyclerView recyclerView) {
+    recyclerView.setHasFixedSize(true);
+    recyclerView.setItemAnimator(new DefaultItemAnimator());
+    GridLayoutManager layoutManager = new GridLayoutManager(context, 2);
+    layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+    recyclerView.addItemDecoration(new MarginDecoration(context));
+    recyclerView.setLayoutManager(layoutManager);
+    recyclerView.setAdapter(new MultiRendererAdapter(generateObjects(),
+        new RendererBuilder(new Factory()), LayoutInflater.from(context)));
+  }
+
   public static void configRecyclerView(final Context context, RecyclerView recyclerView) {
     recyclerView.setHasFixedSize(true);
     recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -45,8 +57,26 @@ public class ViewUtil {
     layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
     recyclerView.addItemDecoration(new MarginDecoration(context));
     recyclerView.setLayoutManager(layoutManager);
-    recyclerView.setAdapter(new RendererAdapter(generateObjects(),
+    recyclerView.setAdapter(new RendererAdapter<Console>(generateConsoles(),
         new RendererBuilder(new Factory()), LayoutInflater.from(context)));
+  }
+
+  public static ArrayList<Console> generateConsoles() {
+    ArrayList<Console> consoles = new ArrayList<>();
+    consoles.add(new Console(
+        "Xbox One", "http://s3.amazonaws.com/digitaltrends-uploads-prod/2013/11/"
+        + "microsoft-xbox-one-review-system-v2.jpg"));
+    consoles.add(new Console("PS4", "http://jogazera.com.br/wp-content/"
+        + "uploads/2014/03/ps4-review.jpg"));
+    consoles.add(new Console("Xbox 360", "http://criticalhits.com.br/"
+        + "wp-content/uploads/2013/10/3rl.jpg"));
+    consoles.add(new Console("PS3", "http://assets.vg247.com/"
+        + "current//2012/09/12032PS3_HW2_copy.jpg"));
+    consoles.add(new Console("Xbox", "http://diariodegoias.com.br/"
+        + "images/stories/imagens/2014/DEZEMBRO/MS-Xbox-Console-Bare-600x361.jpg"));
+    consoles.add(new Console("PS2", "http://www.hotgamez.com.br/"
+        + "imagens/hotgamez.com.br/produtos/CONSOLES/PS2/PS2_2.jpg"));
+    return consoles;
   }
 
   public static ArrayList<Renderable> generateObjects() {
@@ -56,19 +86,7 @@ public class ViewUtil {
         "Intel", "4790K"));
     renderables.add(new Hardware(
         "http://static8.kabum.com.br/produtos/fotos/50118/50118_index_g.jpg", "AMD", "FX5950"));
-    renderables.add(new Console(
-        "Xbox One", "http://s3.amazonaws.com/digitaltrends-uploads-prod/2013/11/"
-            + "microsoft-xbox-one-review-system-v2.jpg"));
-    renderables.add(new Console("PS4", "http://jogazera.com.br/wp-content/"
-        + "uploads/2014/03/ps4-review.jpg"));
-    renderables.add(new Console("Xbox 360", "http://criticalhits.com.br/"
-        + "wp-content/uploads/2013/10/3rl.jpg"));
-    renderables.add(new Console("PS3", "http://assets.vg247.com/"
-        + "current//2012/09/12032PS3_HW2_copy.jpg"));
-    renderables.add(new Console("Xbox", "http://diariodegoias.com.br/"
-        + "images/stories/imagens/2014/DEZEMBRO/MS-Xbox-Console-Bare-600x361.jpg"));
-    renderables.add(new Console("PS2", "http://www.hotgamez.com.br/"
-        + "imagens/hotgamez.com.br/produtos/CONSOLES/PS2/PS2_2.jpg"));
+    renderables.addAll(generateConsoles());
     return renderables;
   }
 

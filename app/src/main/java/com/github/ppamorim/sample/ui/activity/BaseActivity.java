@@ -1,46 +1,21 @@
-/*
-* Copyright (C) 2015 Pedro Paulo de Amorim
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
 package com.github.ppamorim.sample.ui.activity;
 
-import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import android.widget.TextView;
-import android.widget.Toast;
-import butterknife.InjectView;
+import android.content.Intent;
+import butterknife.OnClick;
 import com.github.ppamorim.sample.R;
-import com.github.ppamorim.sample.util.ViewUtil;
 
 public class BaseActivity extends AbstractActivity {
 
-  @InjectView(R.id.toolbar_title) TextView toolbarTitle;
-  @InjectView(R.id.recycler_view) RecyclerView recyclerView;
+  @OnClick(R.id.single) void onSingleClick() {
+    startActivity(new Intent(this, ConsolesActivity.class));
+  }
+
+  @OnClick(R.id.multi) void onMultiClick() {
+    startActivity(new Intent(this, MultiActivity.class));
+  }
 
   @Override protected int getContentViewId() {
     return R.layout.activity_base;
-  }
-
-  @Override protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    toolbarTitle.setText(getResources().getString(R.string.app_name));
-    ViewUtil.configRecyclerView(this, recyclerView);
-  }
-
-  public void showPositionAndData(int position, String data) {
-    Toast.makeText(this, "position: " + position
-        + " data: " + data, Toast.LENGTH_LONG).show();
   }
 
 }

@@ -23,7 +23,8 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.github.ppamorim.recyclerrenderers.viewholder.RenderViewHolder;
 import com.github.ppamorim.sample.R;
 import com.github.ppamorim.sample.domain.model.Hardware;
-import com.github.ppamorim.sample.ui.activity.BaseActivity;
+import com.github.ppamorim.sample.ui.activity.ConsolesActivity;
+import com.github.ppamorim.sample.ui.activity.MultiActivity;
 import com.github.ppamorim.sample.util.ViewUtil;
 
 public class ViewHolderHardware extends RenderViewHolder<Hardware> implements View.OnClickListener {
@@ -45,9 +46,15 @@ public class ViewHolderHardware extends RenderViewHolder<Hardware> implements Vi
   }
 
   @Override public void onClick(View view) {
-    ((BaseActivity) getContext()).showPositionAndData(
-        getAdapterPosition(),
-        getItem().getManufacturer());
+    if(getContext() instanceof MultiActivity) {
+      ((MultiActivity) getContext()).showPositionAndData(
+          getAdapterPosition(),
+          getItem().getManufacturer());
+    } else if(getContext() instanceof ConsolesActivity) {
+      ((ConsolesActivity) getContext()).showPositionAndData(
+          getAdapterPosition(),
+          getItem().getManufacturer());
+    }
   }
 
 }
